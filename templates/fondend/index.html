@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Boutique</title>
+  <link rel="stylesheet" href="/static/style.css?v=3" />
+</head>
+<body>
+
+  <div class="phone">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>🏪 Ma Boutique</h1>
+      <div class="header-actions">
+        <button class="add-btn" aria-label="Ajouter une vente">+</button>
+        <a href="/logout" class="logout-btn" title="Déconnexion">⏻</a>
+      </div>
+    </header>
+    <div class="line"></div>
+    <!-- STATS -->
+    <section class="stats">
+      <div class="card" id="dayTotal">
+        <p>💰 Aujourd'hui</p>
+        <h2>0 €</h2>
+      </div>
+
+      <div class="card" id="monthTotal">
+        <p>📅 Ce mois</p>
+        <h2>0 €</h2>
+      </div>
+
+      <div class="card" id="yearTotal">
+        <p>📆 Cette année</p>
+        <h2>0 €</h2>
+      </div>
+
+      <div class="card" id="revenueTotal">
+        <p>🏆 Total</p>
+        <h2>0 €</h2>
+      </div>
+    </section>
+
+    <!-- GRAPH -->
+    <section class="graph">
+      <h3>📈 Ventes du mois</h3>
+      <canvas id="chart"></canvas>
+    </section>
+
+    <!-- LISTE DES VENTES -->
+    <section class="sales">
+      <h3>Liste des ventes</h3>
+      <div class="card">
+        <table class="sales-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Produit</th>
+              <th>Qté</th>
+              <th>Paiement</th>
+              <th>Total (€)</th>
+            </tr>
+          </thead>
+          <tbody id="salesTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- MODAL : AJOUT DE VENTE -->
+  <div class="modal hidden" id="saleModal">
+    <div class="modal-card">
+
+      <h2>Ajouter une vente</h2>
+
+      <label>
+        Produit
+        <input type="text" id="productInput" placeholder="Ex : Chaussure Nike" />
+      </label>
+
+      <label>
+        Quantité
+        <input type="number" id="qtyInput" min="1" value="1" />
+      </label>
+
+      <label>
+        Paiement
+        <select id="paymentInput">
+          <option>Carte</option>
+          <option>Espèces</option>
+        </select>
+      </label>
+
+      <label>
+        Total (€)
+        <input type="number" id="priceInput" min="0" />
+      </label>
+
+      <div class="modal-actions">
+        <button class="btn cancel" type="button">Annuler</button>
+        <button class="btn confirm" type="button">Ajouter</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/static/script.js?v=6"></script>
+</body>
+</html>

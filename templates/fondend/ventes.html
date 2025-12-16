@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Ventes</title>
+  <link rel="stylesheet" href="/static/style.css?v=2" />
+</head>
+<body>
+
+<div class="full-page sales-page">
+  <!-- Conteneur des boutons -->
+  <div class="buttons-top">
+    <button id="backBtn">← Retour au Dashboard</button>
+    <div class="buttons-right">
+      <button id="downloadBtn">Télécharger le tableau</button>
+      <a href="/logout" class="logout-btn-text">Déconnexion</a>
+    </div>
+  </div>
+
+  <h2>Liste complète des ventes</h2>
+
+  <!-- Filtres -->
+  <div class="filters">
+    <button data-filter="day">Jour</button>
+    <button data-filter="week">Semaine</button>
+    <button data-filter="month">Mois</button>
+    <button data-filter="year">Année</button>
+    <button data-filter="all">Tout</button>
+  </div>
+
+  <!-- Tableau -->
+  <div class="table-wrapper">
+    <table class="sales-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Produit</th>
+          <th>Qté</th>
+          <th>Paiement</th>
+          <th>Total (€)</th>
+        </tr>
+      </thead>
+      <tbody id="fullSalesTableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Total en bas avec trait -->
+  <hr class="total-separator">
+  <div id="totalContainer">
+    Total : <span id="totalValue">0 €</span>
+  </div>
+</div>
+
+<script src="/static/full-sales.js?v=2"></script>
+</body>
+</html>
