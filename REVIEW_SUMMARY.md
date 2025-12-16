@@ -20,6 +20,8 @@ Review du projet d'un développeur en formation. Le projet est une application F
 - `requirements.txt` : Spécifié `bcrypt==4.0.1`
 - `main.py` : Ajout événement `startup` et cache
 
+## ENSUITE
+
 ### 2. **Architecture monolithique** ✅ RÉSOLU
 **Problème :**
 - Tout le code dans un seul fichier `main.py` (226 lignes)
@@ -31,6 +33,7 @@ Review du projet d'un développeur en formation. Le projet est une application F
 - Création de 3 services (users, sessions, sales)
 - Création de 3 routers (auth, pages, api)
 - Configuration centralisée dans `config.py`
+-Permet une meilleur organisation du code et une meilleure testabilité, maintenabilité et évolutivité
 
 **Structure créée :**
 ```
@@ -94,24 +97,13 @@ backend/
 4. **CODE_REVIEW.md** : Review détaillée avec recommandations
 5. **test_architecture.py** : Script de test automatisé
 
-### Résultats des tests
-```
-✅ PASS - Imports
-✅ PASS - UserService
-✅ PASS - SessionService
-✅ PASS - SalesService
-✅ PASS - Routers
-
-🎯 Score: 5/5 tests réussis
-```
 
 ## ✅ Points Positifs du Code
 
-1. **Architecture DDD** : Excellente séparation des responsabilités
+1. **Découpage des responsabilités minimum** : Une fonction par action, top, facilite la refacto par la suite
 2. **Sécurité** : Bcrypt pour les mots de passe, sessions sécurisées
 3. **Code propre** : Type hints, docstrings, nommage cohérent
-4. **Performance** : Système de cache efficace
-5. **Bonnes pratiques** : Dataclasses, singleton, pas de duplication
+4. **Utilisation bonnes pratiques pour gérer les dépendances avec python (requirements.txt)** : facile à maintenir et à mettre à jour et travail en équipe plus simple
 
 ## 🔧 Points à Améliorer (Recommandations)
 
@@ -120,6 +112,7 @@ backend/
 2. ⚠️ Ajouter validation Pydantic
 3. ⚠️ Ajouter système de logging
 4. ⚠️ Ajouter gestion centralisée des erreurs
+5. ⚠️⚠️ Ajout de git ignore pour les fichiers inutiles (pycache, venv, etc.)
 
 ### Moyen terme
 5. 🔮 Tests unitaires complets avec pytest
@@ -135,22 +128,11 @@ backend/
 
 ## 📈 Évaluation Globale
 
-### Scores par catégorie
-- **Architecture** : 9/10 ⭐⭐⭐⭐⭐
-- **Sécurité** : 7/10 ⭐⭐⭐⭐
-- **Performance** : 8/10 ⭐⭐⭐⭐
-- **Maintenabilité** : 8/10 ⭐⭐⭐⭐
-- **Documentation** : 6/10 ⭐⭐⭐
-
-### Note globale : **8/10** 🎉
 
 ## 💡 Feedback pour le Développeur
 
 ### Ce qui est excellent ✨
-- Très bon niveau pour un développeur en formation
-- Compréhension solide des concepts de sécurité
-- Code bien structuré et lisible
-- Bonne utilisation de FastAPI
+- Bonne utilisation des libs et des premiers concepts de sécurité (hasing mdp, sessions)
 
 ### Ce qui peut être amélioré 📚
 - Ajouter de la validation des données (Pydantic)
