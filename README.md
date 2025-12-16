@@ -62,7 +62,30 @@ uvicorn main:app --reload
 - **Login** : `admin` / `admin123`
 - **Login alternatif** : `boutique` / `boutique123`
 
-## 📁 Structure du projet
+#### 🔧 Modifier le code
+1. 🏗️ [backend/ARCHITECTURE.md](./backend/ARCHITECTURE.md) - Structure du projet
+2. 📖 [backend/QUICK_START.md](./backend/QUICK_START.md) - Exemples de modifications
+3. 🧪 Tester avec `python backend/test_architecture.py`
+
+### 📖 Tous les documents
+
+| Document | Description | Durée |
+|----------|-------------|-------|
+| [backend/QUICK_START.md](./backend/QUICK_START.md) | Guide de démarrage rapide | 5 min |
+| [backend/README.md](./backend/README.md) | Documentation complète | 15 min |
+| [backend/ARCHITECTURE.md](./backend/ARCHITECTURE.md) | Architecture DDD détaillée | 30 min |
+| [backend/DIAGRAM.md](./backend/DIAGRAM.md) | Diagrammes visuels | 20 min |
+| [backend/CODE_REVIEW.md](./backend/CODE_REVIEW.md) | Review et recommandations | 45 min |
+| [backend/INDEX.md](./backend/INDEX.md) | Navigation complète | 5 min |
+| [REVIEW_SUMMARY.md](./REVIEW_SUMMARY.md) | Résumé de la review | 10 min |
+| [CHANGELOG.md](./CHANGELOG.md) | Historique des modifications | 5 min |
+| [FINAL_SUMMARY.md](./FINAL_SUMMARY.md) | Résumé final complet | 10 min |
+
+---
+
+## 🏗️ Architecture
+
+### Structure du Projet
 
 ```
 boutique/
